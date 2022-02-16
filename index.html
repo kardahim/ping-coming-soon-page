@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Paweł Ciszewski">
+  <!-- styles -->
+  <link rel="stylesheet" href="/styles/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/c3f50d45ee.js" crossorigin="anonymous"></script>
+  <title>Ping coming soon page</title>
 </head>
+
 <body>
-
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
+  <main class="container">
+    <div class="logo">
+      <img src="/images/logo.svg" alt="logo">
+    </div>
+    <!-- headers -->
+    <header>
+      <h1>
+        <span>We are launching</span>
+        <span>soon!</span>
+      </h1>
+      <h4>Subscribe and get notified</h4>
+    </header>
+    <!-- email form -->
+    <form action="/" method="get" id="form">
+      <div class="email">
+        <input type="text" id="email" placeholder="Your email address...">
+        <i class="error"></i>
+      </div>
+      <button type="submit">Notify Me</button>
+    </form>
+    <!-- dashboard -->
+    <div class="dashboard">
+      <img src="/images/illustration-dashboard.png" alt="dashboard">
+    </div>
+  </main>
   <footer>
+    <div class="socials">
+      <a href="/" class="media" aria-label="facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="/" class="media" aria-label="twitter">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="/" class="media" aria-label="instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    <span>&copy; Copyright Ping. All rights reserved.</span>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/kardahim">Paweł Ciszewski</a>.
     </p>
   </footer>
+  <!-- scripts -->
+  <script src="/scripts/scripts.js"></script>
 </body>
+
 </html>

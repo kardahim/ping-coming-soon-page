@@ -1,0 +1,154 @@
+// colors
+$prBlue:  hsl(223, 87%, 63%);
+$scBlue: hsl(223, 100%, 88%);
+$scRed: hsl(354, 100%, 66%);
+$nGray: hsl(0, 0%, 59%);
+$nBlue: hsl(209, 33%, 12%);
+// fonts
+$ff: 'Libre Franklin', sans-serif;
+$fwL: 300;
+$fwSB: 600;
+$fwB: 700;
+$fs: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+        margin: 60px 0 40px;
+        height: 25px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    header {
+        font-size: $fs;
+        text-align: center;
+
+        span:nth-child(1) {
+            color: $nGray;
+            font-weight: $fwL;
+        }
+
+        span:nth-child(2) {
+            color: $nBlue;
+            font-weight: $fwB;
+        }
+
+        h4 {
+            color: $nBlue;
+            font-weight: $fwL;
+            margin: 20px 0 30px;
+        }
+    }
+
+    form {
+        display: flex;
+
+        .email {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                height: 45px;
+                width: 360px;
+                border-radius: 25px;
+                border: 1px solid $scBlue;
+                outline: none;
+                text-indent: 25px;
+
+                ::placeholder {
+                    color: $nGray;
+                }
+            }
+
+
+            .error {
+                color: $scRed;
+                margin-left: 25px;
+                margin-top: 5px;
+                font-size: 13px;
+                visibility: hidden;
+            }
+        }
+
+        button {
+            height: 45px;
+            color: white;
+            background: $prBlue;
+            border: none;
+            margin-left: 15px;
+            border-radius: 30px;
+            width: 180px;
+            box-shadow: 0 0 5px $scBlue;
+        }
+
+        button:hover {
+            background-color: #5F8EF4;
+            cursor: pointer;
+        }
+    }
+
+    .dashboard {
+        margin: 50px 0;
+
+        img {
+            width: 600px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .socials {
+       display: flex;
+
+       .media {
+           margin-left: 10px;
+           border: 1px solid $scBlue;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           width: 40px;
+           height: 40px;
+           border-radius: 100%;
+           color: $prBlue;
+           text-decoration: none;
+       }
+
+       .media:hover {
+           color: white;
+           background: $prBlue;
+       }
+    }
+
+    span {
+        color: $nGray;
+        margin: 20px 0;
+    }
+
+    .attribution {
+        font-size: $fs;
+
+        a {
+            color: $prBlue;
+        }
+    }
+}
