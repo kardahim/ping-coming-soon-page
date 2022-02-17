@@ -27,6 +27,12 @@ body {
   height: 25px;
 }
 
+@media only screen and (max-width: 650px) {
+  .container .logo {
+    height: 20px;
+  }
+}
+
 .container .logo img {
   height: 100%;
 }
@@ -34,6 +40,12 @@ body {
 .container header {
   font-size: 20px;
   text-align: center;
+}
+
+@media only screen and (max-width: 650px) {
+  .container header {
+    font-size: 17px;
+  }
 }
 
 .container header span:nth-child(1) {
@@ -58,6 +70,22 @@ body {
   display: flex;
 }
 
+@media only screen and (max-width: 650px) {
+  .container form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .container form .email {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,6 +94,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media only screen and (max-width: 650px) {
+  .container form .email {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .container form .email input {
@@ -93,12 +130,24 @@ body {
   color: #969696;
 }
 
+@media only screen and (max-width: 650px) {
+  .container form .email input {
+    width: 80%;
+  }
+}
+
 .container form .email .error {
   color: #ff5263;
   margin-left: 25px;
   margin-top: 5px;
   font-size: 13px;
-  visibility: hidden;
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .container form .email .error {
+    margin-bottom: 15px;
+  }
 }
 
 .container form button {
@@ -113,6 +162,14 @@ body {
           box-shadow: 0 0 5px #c2d3ff;
 }
 
+@media only screen and (max-width: 650px) {
+  .container form button {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
 .container form button:hover {
   background-color: #5F8EF4;
   cursor: pointer;
@@ -122,8 +179,26 @@ body {
   margin: 50px 0;
 }
 
+@media only screen and (max-width: 650px) {
+  .container .dashboard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 120px;
+  }
+}
+
 .container .dashboard img {
   width: 600px;
+}
+
+@media only screen and (max-width: 650px) {
+  .container .dashboard img {
+    width: 80%;
+  }
 }
 
 footer {
@@ -176,6 +251,12 @@ footer span {
 
 footer .attribution {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+  footer .attribution {
+    font-size: 13px;
+  }
 }
 
 footer .attribution a {

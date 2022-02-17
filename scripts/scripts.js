@@ -21,7 +21,7 @@ function validation(event) {
         event.preventDefault();
         email.style.border = "1px solid hsl(354, 100%, 66%)";
 
-        document.getElementById('error').style.visibility = "visible";
+        document.getElementById('error').style.display = "block";
         document.getElementById('error').innerHTML = message;
     }
 }

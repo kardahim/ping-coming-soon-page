@@ -10,6 +10,12 @@ $fwL: 300;
 $fwSB: 600;
 $fwB: 700;
 $fs: 20px;
+// size
+@mixin mobile {
+    @media only screen and (max-width:650px) {
+        @content;
+    }
+}
 
 * {
     margin: 0;
@@ -30,6 +36,10 @@ body {
         margin: 60px 0 40px;
         height: 25px;
 
+        @include mobile {
+            height: 20px;
+        }  
+
         img {
             height: 100%;
         }
@@ -38,6 +48,10 @@ body {
     header {
         font-size: $fs;
         text-align: center;
+
+        @include mobile {
+            font-size: 17px;
+        }  
 
         span:nth-child(1) {
             color: $nGray;
@@ -59,9 +73,21 @@ body {
     form {
         display: flex;
 
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
         .email {
             display: flex;
             flex-direction: column;
+            
+            @include mobile() {
+                width: 100%;
+                align-items: center;
+            }
 
             input {
                 height: 45px;
@@ -74,6 +100,10 @@ body {
                 ::placeholder {
                     color: $nGray;
                 }
+
+                @include mobile {
+                    width: 80%;
+                }
             }
 
 
@@ -82,7 +112,11 @@ body {
                 margin-left: 25px;
                 margin-top: 5px;
                 font-size: 13px;
-                visibility: hidden;
+                display: none;
+
+                @include mobile {
+                    margin-bottom: 15px;
+                }                
             }
         }
 
@@ -95,6 +129,12 @@ body {
             border-radius: 30px;
             width: 180px;
             box-shadow: 0 0 5px $scBlue;
+
+            @include mobile {
+                width: 80%;
+                margin-left: 0;
+                margin-top: 15px;
+            }
         }
 
         button:hover {
@@ -106,8 +146,18 @@ body {
     .dashboard {
         margin: 50px 0;
 
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 120px;
+        }
+
         img {
             width: 600px;
+            
+            @include mobile {
+                width: 80%;
+            }
         }
     }
 }
@@ -146,6 +196,10 @@ footer {
 
     .attribution {
         font-size: $fs;
+
+        @include mobile {
+            font-size: 13px;
+        }
 
         a {
             color: $prBlue;
